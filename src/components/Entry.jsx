@@ -1,17 +1,18 @@
-import React from 'react'
+import React from 'react';
+import Emoji from './Emoji';
+import Enames from './Enames';
+import Emeaning from './Emeaning';
 
-const Entry = () => {
+const Entry = (props) => {
+
   return (
     <div className="term">
           <dt>
-            <span className="emoji" role="img" aria-label="Tense Biceps">
-              💪
-            </span>
-            <span>Tense Biceps</span>
+            <Emoji emoji={props.emoji}/>
+            <Enames name={props.name} />
           </dt>
           <dd>
-            “You can do that!” or “I feel strong!” Arm with tense biceps. Also
-            used in connection with doing sports, e.g. at the gym.
+            <Emeaning meaning={props.meaning} />
           </dd>
         </div>
   )
